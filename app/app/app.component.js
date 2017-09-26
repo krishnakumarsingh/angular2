@@ -1,4 +1,4 @@
-System.register(['angular2/core', '../courses/courses.component', '../authors/authors.component', '../headers/Header.component', '../search/search.component'], function(exports_1, context_1) {
+System.register(['angular2/core', '../courses/courses.component', '../authors/authors.component', '../headers/Header.component', '../searches/search.component', '../carts/cart.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', '../courses/courses.component', '../authors/au
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, courses_component_1, authors_component_1, Header_component_1, search_component_1;
+    var core_1, courses_component_1, authors_component_1, Header_component_1, search_component_1, cart_component_1;
     var path, AppComponent;
     return {
         setters:[
@@ -28,6 +28,9 @@ System.register(['angular2/core', '../courses/courses.component', '../authors/au
             },
             function (search_component_1_1) {
                 search_component_1 = search_component_1_1;
+            },
+            function (cart_component_1_1) {
+                cart_component_1 = cart_component_1_1;
             }],
         execute: function() {
             path = "./app/app/";
@@ -41,7 +44,7 @@ System.register(['angular2/core', '../courses/courses.component', '../authors/au
                         selector: 'my-app',
                         templateUrl: path + "app.component.html",
                         styleUrls: [path + "app.component.css"],
-                        directives: [courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent, Header_component_1.HeadersComponent, search_component_1.SearchesComponent]
+                        directives: [courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent, Header_component_1.HeadersComponent, search_component_1.SearchesComponent, cart_component_1.CartsComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

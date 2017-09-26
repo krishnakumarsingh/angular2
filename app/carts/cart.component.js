@@ -11,28 +11,28 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var HeadersComponent;
+    var CartsComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            HeadersComponent = (function () {
-                function HeadersComponent() {
+            CartsComponent = (function () {
+                function CartsComponent() {
                 }
-                HeadersComponent = __decorate([
+                CartsComponent = __decorate([
                     core_1.Component({
-                        selector: 'headers',
-                        templateUrl: "app/headers/header.component.html",
-                        styleUrls: ["app/headers/header.component.css"]
+                        selector: 'carts',
+                        templateUrl: "app/carts/cart.component.html",
+                        styleUrls: ["app/carts/cart.component.css"]
                     }), 
                     __metadata('design:paramtypes', [])
-                ], HeadersComponent);
-                return HeadersComponent;
+                ], CartsComponent);
+                return CartsComponent;
             }());
-            exports_1("HeadersComponent", HeadersComponent);
+            exports_1("CartsComponent", CartsComponent);
         }
     }
 });
-//# sourceMappingURL=Header.component.js.map
+//# sourceMappingURL=cart.component.js.map
