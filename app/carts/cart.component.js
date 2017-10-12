@@ -24,9 +24,42 @@ System.register(['angular2/core', './cart.service'], function(exports_1, context
             CartsComponent = (function () {
                 function CartsComponent(cartService) {
                     this.title = "The title of cart page";
+                    this.total = 0;
+                    this.model = {};
                     this.carts = cartService.getCarts();
-                    console.log(this.carts);
                 }
+                CartsComponent.prototype.clicked = function (event, id) {
+                    event.preventDefault();
+                    id = this.model.id || Math.floor(Math.random() * (921728736 - 632910392 + 1)) + 632910392;
+                    this.carts.push({
+                        id: id,
+                        title: this.model.title,
+                        price: this.model.price,
+                        quantity: this.model.quantity,
+                        body_html: this.model.body_html,
+                        image: this.model.image
+                    });
+                };
+                CartsComponent.prototype.edited = function (event, id) {
+                    event.preventDefault();
+                    this.model.id = id.id,
+                        this.model.title = id.title,
+                        this.model.price = id.price,
+                        this.model.quantity = id.quantity,
+                        this.model.body_html = id.body_html,
+                        this.model.image = id.image;
+                };
+                CartsComponent.prototype.deleted = function (e, id) {
+                    var index = -1;
+                    var val = id;
+                    var filteredObj = this.carts.find(function (item, i) {
+                        if (item.id === val) {
+                            index = i;
+                            return i;
+                        }
+                    });
+                    this.carts.splice(filteredObj, 1);
+                };
                 CartsComponent = __decorate([
                     core_1.Component({
                         selector: 'carts',
